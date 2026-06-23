@@ -1,0 +1,12 @@
+@media (max-width: 1024px) {
+    .features-grid, .pricing-grid, .blog-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .hamburger { display: flex; }
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background-color: var(--bg-secondary); padding: 1.5rem; gap: 1rem; border-bottom: 1px solid var(--border-color); }
+    .nav-links.active { display: flex; }
+    .nav-links a { margin-left: 0; }
+    .hero-grid { flex-direction: column; text-align: center; }
+    .features-grid, .pricing-grid, .blog-grid { grid-template-columns: 1fr; }
+}

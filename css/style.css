@@ -1,0 +1,76 @@
+:root {
+    --bg-primary: #f8f9fa;
+    --bg-secondary: #ffffff;
+    --text-main: #212529;
+    --text-muted: #6c757d;
+    --primary-color: #4f46e5;
+    --primary-hover: #4338ca;
+    --card-bg: #ffffff;
+    --border-color: #dee2e6;
+    --error-color: #dc3545;
+}
+
+[data-theme="dark"] {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --primary-color: #6366f1;
+    --primary-hover: #4f46e5;
+    --card-bg: #1e293b;
+    --border-color: #334155;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-family: sans-serif; }
+body { background-color: var(--bg-primary); color: var(--text-main); transition: 0.3s; }
+.container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* Components */
+.btn { display: inline-block; padding: 0.75rem 1.5rem; font-weight: 600; border-radius: 6px; border: none; cursor: pointer; text-decoration: none; }
+.btn-primary { background-color: var(--primary-color); color: #ffffff; }
+.btn-outline { background-color: transparent; border: 2px solid var(--primary-color); color: var(--primary-color); }
+.btn-block { width: 100%; }
+.card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; }
+.section-title { text-align: center; font-size: 2.25rem; margin-bottom: 3rem; }
+
+/* Navbar */
+.navbar { position: sticky; top: 0; z-index: 1000; background-color: var(--bg-secondary); border-bottom: 1px solid var(--border-color); padding: 1rem 0; }
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.5rem; font-weight: 700; }
+.logo span { color: var(--primary-color); }
+.nav-links a { color: var(--text-main); text-decoration: none; margin-left: 2rem; }
+.nav-actions { display: flex; align-items: center; gap: 1rem; }
+.btn-theme { background: none; border: none; font-size: 1.25rem; cursor: pointer; }
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
+.hamburger span { width: 25px; height: 3px; background-color: var(--text-main); }
+
+/* Sections Layout */
+.hero-section { padding: 5rem 0; }
+.hero-grid { display: flex; align-items: center; gap: 2rem; }
+.hero-content h1 { font-size: 3rem; margin-bottom: 1.5rem; }
+.hero-content p { font-size: 1.25rem; color: var(--text-muted); margin-bottom: 2rem; }
+.hero-image img { width: 100%; border-radius: 12px; }
+
+.features-section { padding: 5rem 0; background-color: var(--bg-secondary); }
+.features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.feature-card .icon { font-size: 2.5rem; margin-bottom: 1rem; }
+
+.pricing-section { padding: 5rem 0; }
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.pricing-card { text-align: center; position: relative; }
+.pricing-card .price { font-size: 2.5rem; font-weight: 700; margin: 1rem 0; }
+.pricing-card.recommended { border: 2px solid var(--primary-color); }
+.pricing-card .badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background-color: var(--primary-color); color: #ffffff; padding: 0.25rem 1rem; border-radius: 20px; font-size: 0.8rem; }
+
+.blog-section { padding: 5rem 0; background-color: var(--bg-secondary); }
+.blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.state-msg { text-align: center; grid-column: 1 / -1; padding: 2rem; }
+
+.contact-section { padding: 5rem 0; }
+.contact-container { max-width: 600px; }
+.contact-form { background-color: var(--bg-secondary); padding: 2.5rem; border-radius: 12px; border: 1px solid var(--border-color); }
+.form-group { margin-bottom: 1.5rem; }
+.form-group label { display: block; margin-bottom: 0.5rem; }
+.form-group input, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 6px; background-color: var(--bg-primary); color: var(--text-main); }
+.error-msg { color: var(--error-color); font-size: 0.85rem; display: block; margin-top: 0.25rem; height: 18px; }

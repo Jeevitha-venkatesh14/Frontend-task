@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Optimize Your Workflow</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">Task<span>Flow</span></div>
+            <nav class="nav-links" id="navLinks" aria-label="Main Navigation">
+                <a href="#hero">Home</a>
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#blog">Blog</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button id="themeToggle" class="btn-theme" aria-label="Toggle Dark Mode">🌓</button>
+                <button class="hamburger" id="hamburger" aria-label="Open Menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1>Manage tasks like never before</h1>
+                    <p>Streamline your workflow, collaborate with your team, and track productivity seamlessly.</p>
+                    <a href="#pricing" class="btn btn-primary">Get Started Free</a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://picsum.photos/500/350" alt="TaskFlow Dashboard Interface" loading="lazy" style="border-radius: 12px; max-width: 100%; height: auto;">
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features-section">
+            <div class="container">
+                <h2 class="section-title">Powerful Features</h2>
+                <div class="features-grid">
+                    <div class="card feature-card">
+                        <div class="icon">🚀</div>
+                        <h3>Fast Execution</h3>
+                        <p>Lightning-fast workflows optimized for high-performing teams.</p>
+                    </div>
+                    <div class="card feature-card">
+                        <div class="icon">🔒</div>
+                        <h3>Secure Data</h3>
+                        <p>End-to-end encryption keeping your proprietary tasks safe.</p>
+                    </div>
+                    <div class="card feature-card">
+                        <div class="icon">📊</div>
+                        <h3>Advanced Analytics</h3>
+                        <p>Deep-dive metrics to pinpoint and clear project bottlenecks.</p>
+                    </div>
+                    <div class="card feature-card">
+                        <div class="icon">🤝</div>
+                        <h3>Real-time Collab</h3>
+                        <p>Work concurrently with team members across the globe effortlessly.</p>
+                    </div>
+                    <div class="card feature-card">
+                        <div class="icon">☁️</div>
+                        <h3>Cloud Sync</h3>
+                        <p>Access your projects instantly from any device, anywhere, anytime.</p>
+                    </div>
+                    <div class="card feature-card">
+                        <div class="icon">⚙️</div>
+                        <h3>Automations</h3>
+                        <p>Set up custom triggers to automate repetitive task handoffs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing-section">
+            <div class="container">
+                <h2 class="section-title">Simple, Transparent Pricing</h2>
+                <div class="pricing-grid">
+                    <div class="card pricing-card">
+                        <h3>Starter</h3>
+                        <div class="price">$0<span>/mo</span></div>
+                        <p>Perfect for freelancers getting started.</p>
+                        <button class="btn btn-outline">Choose Starter</button>
+                    </div>
+                    <div class="card pricing-card recommended">
+                        <div class="badge">Recommended</div>
+                        <h3>Professional</h3>
+                        <div class="price">$29<span>/mo</span></div>
+                        <p>Best for scaling teams and small businesses.</p>
+                        <button class="btn btn-primary">Choose Pro</button>
+                    </div>
+                    <div class="card pricing-card">
+                        <h3>Enterprise</h3>
+                        <div class="price">$99<span>/mo</span></div>
+                        <p>Advanced controls and dedicated support.</p>
+                        <button class="btn btn-outline">Contact Sales</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="blog-section">
+            <div class="container">
+                <h2 class="section-title">Latest Updates</h2>
+                <div id="blogContainer" class="blog-grid"></div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container contact-container">
+                <h2 class="section-title">Get In Touch</h2>
+                <form id="contactForm" novalidate class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="John Doe" required>
+                        <span class="error-msg" id="nameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="john@example.com" required>
+                        <span class="error-msg" id="emailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" placeholder="Your message..." required></textarea>
+                        <span class="error-msg" id="messageError"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
